@@ -10,8 +10,13 @@ RUN npm install -g @nestjs/cli
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies with robust network retry configuration
+RUN npm config set registry http://registry.npmjs.org/ && \
+    npm config set maxsockets 3 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 120000 && \
+    npm config set fetch-retries 10 && \
+    npm install --no-audit --no-fund
 
 # Copy source code
 COPY . .

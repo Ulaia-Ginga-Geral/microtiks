@@ -232,3 +232,6 @@ loki_data/
 
 # Worker data
 celerybeat.pid
+
+# Private Keys
+keys/

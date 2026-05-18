@@ -1,6 +1,6 @@
-# HaroonNet ISP Platform - Worker Service Dependencies
+# Afriwind Net ISP Platform - Worker Service Dependencies
 
-# Core framework
+# Core Celery + Redis
 celery[redis]==5.3.4
 redis==4.6.0
 
@@ -21,10 +21,9 @@ pytz==2023.3
 
 # Notifications
 twilio==8.10.3
-sendgrid==6.11.0
 jinja2==3.1.2
 
-# Billing & Payments
+# Billing (Stripe)
 stripe==7.8.0
 
 # RADIUS CoA
@@ -33,12 +32,5 @@ pyrad==2.4
 # Logging
 structlog==23.2.0
 
-# Testing
-pytest==7.4.3
-pytest-celery==0.0.0a1
-pytest-mock==3.12.0
-
-# Development
-black==23.11.0
-flake8==6.1.0
-mypy==1.7.1
+# Monitoring
+flower==2.0.1
