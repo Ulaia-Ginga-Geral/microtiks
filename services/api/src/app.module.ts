@@ -7,7 +7,6 @@ import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { CustomersModule } from './modules/customers/customers.module';
-import { ReportsModule } from './modules/reports/reports.module';
 import { NasModule } from './modules/nas/nas.module';
 import { SettingsModule } from './modules/settings/settings.module';
 import databaseConfig from './config/database.config';
@@ -40,7 +39,6 @@ import redisConfig from './config/redis.config';
     AuthModule,
     UsersModule,
     CustomersModule,
-    ReportsModule,
     NasModule,
     SettingsModule,
   ],
